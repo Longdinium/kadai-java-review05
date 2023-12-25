@@ -24,8 +24,7 @@ public class Review05 {
             con = DriverManager.getConnection(
                     "jdbc:mysql://localhost/kadaidb?useSSL=false&allowPublicKeyRetrieval=true",
                     "root",
-                    "Kurofune01Nhk@"
-                    );
+                    "Kurofune01Nhk@");
             
             // 4. DBとやりとりする窓口（Statementオブジェクト）の作成
             String sql = "SELECT * FROM person WHERE id = ?";
@@ -37,7 +36,7 @@ public class Review05 {
             
             // PreparedStamementオブジェクトの?に値をセット
             pstmt.setString(1, input);
-            rs = pstmt.executeQuery(sql);
+            rs = pstmt.executeQuery();
             
 
             // 7. 結果を表示する
